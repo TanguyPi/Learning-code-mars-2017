@@ -11,6 +11,37 @@
     <!--Ajouter un titre à la page -->
     <title>Bonjour le monde</title>
 
+<style> 
+td{
+    border: dashed;
+    width: 50px;
+    height: 100px;
+      }
+
+
+
+ul{
+    background-color: red; list-style-type: none;
+}
+
+ol{ 
+    background-color: blue;
+}
+
+
+tab{ 
+    border:dashed; border-color: black; width: 500px; border-collapse: collapse; text-align: center;
+}
+
+fieldset{
+    background-image: url('http://ayala.a.y.pic.centerblog.net/cf941f57.jpg'); text-align: center"
+}
+</style>
+
+
+
+
+
 </head>
 
     <!--Ajouter du contenu dans la page-->
@@ -30,16 +61,14 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <i>Tempora soluta</i> aliquid est dolorem <b>quos architecto </b> quasi nobis, at commodi placeat deserunt temporibus culpa odio, nostrum totam aperiam ipsam itaque consectetur!</p>
 
         <!--Liste ordonnée-->
-        <ol style="background-color: blue;">
-         
+         <ol>
             <li>John</li> 
             <li>Paul</li>
             <li>Georges</li>
         </ol>
 
         <!--Liste non-ordonnée-->
-        <ul style=" background-color: red;
-        list-style-type: none;">
+        <ul>
             <li>John</li> 
             <li>Paul</li>
             <li>Georges</li>
@@ -47,20 +76,47 @@
 
          <!--Image-->
          <img src="img/minion1.jpg" alt="Photo de voyage"> 
+
+  <!--Tableau-->
+
+     <table>
+         <tbody>
+                  <tr> 
+                    <td> </td>
+                    <td </td>
+                    <td </td>   
+                 </tr>             
+                    
+                  <tr> 
+                    <td/td>
+                    <td>Mike</td>
+                    <td ></td> 
+                  </tr>  
+                 <tr>
+                    <td/td>
+                    <td></td>
+                    <td></td> 
+                </tr>
+
+        </tbody> 
+
+    </table>
          
         <!--Balise formulaire-->
  <form action="about.html" method="POST">
-     <fieldset style="background-image: url('http://ayala.a.y.pic.centerblog.net/cf941f57.jpg'); text-align: center" 
+     <fieldset>
         <legend> Mike</legend> 
         Nom:<p>
        <input type="text" name="nom"><p>
         Prenom: <p> 
        <input type="text" name="Prénom"><p> 
-       <input type="submit" value="submit"
+       <input type="submit" value="submit">
     
     </fieldset> 
  </form>
- 
+
+
+
  </body>
 
 </html>
