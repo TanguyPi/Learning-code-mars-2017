@@ -1,28 +1,25 @@
-
 <!DOCTYPE html>
 
     <html>  
-         <head>
+        <!--Configuer la page-->
+        <head>
+             <!--Caractère spéciaux-->
             <meta charset="utf-_"> 
-            <title>8 mars</title>
+            <!--Titre-->
+            <title>8 mars-intégrer fichier css</title>
 
-            <!--Ajouter le style dans la balise head-->
-            <style>
-            
-            h2{
-                color: red;
-            }
+            <!--Intégrer la balisee css-->
+            <link rel="stylesheet" href="css/style.css">
 
-            </style>
 
          </head>
 
             <body>
 
                     <!--Sous-titre-->
-                <h1>Hello World </h1>
+                    <h1>Hello World </h1>
             
-                    
+                  
                 <header>
             
                     <h1> Tanguy Pichavant - lolilol</h1>
@@ -30,9 +27,9 @@
                             <!--Navigation principale-->
                             <nav>
                                 <ul>
-                                    <li><a href="#" style="color:red">Acceuil</a></li>
-                                    <li><a href="#" style="color:red">A propos</a></li>
-                                    <li><a href="#" style="color:green">Portofolio</a></li>
+                                    <li><a href="#">Acceuil</a></li>
+                                    <li><a href="#">A propos</a></li>
+                                    <li><a href="#">Portofolio</a></li>
                                     <li><a href="#">Contact</a></li>
                                     <li><a href="#">Profil GitHub</a></li>
                                 </ul>
@@ -43,13 +40,13 @@
                      <main>
             
                      <!--Créer une zone-->
-        <section>
-                <h2>A propos de Tanguy Pichavant</h2>
+        <section class="redBackground">
+                <h2 id="bigTitle">A propos de <b>Tanguy Pichavant</b></h2>
                 <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam sit, sed eaque porro ab est odit, cum reprehenderit ipsum illum maxime consequatur eligendi dolore repellendus aperiam eius doloribus at ratione.</p>
         </section>
 
          <section>
-                <h2>Portofolio Tanguy Pichavant</h2>
+                <h2>Portofolio <b>Pichavant</b></h2>
                 <p>Cliquez sur un des projets ci-dessous</p>
             
     
@@ -74,7 +71,7 @@
 
                     <!--Créer une zone-->
             <section>
-                    <h2>Contacter Tanguy Pichavant</h2>
+                    <h2>Contacter <b>Pichavant</b></h2>
                     <p>Vous pouvez envoyer un email en cliquant sur cette adresse: <a href="#">tanguy.pichavant@hotmail.com</a></p>
 
             </section>
@@ -84,7 +81,7 @@
 
 
             <!--Fermeture de la page -->
-     <footer>
+     <footer class="redBackground">
          <p> Under MIT Licence </p>            
      </footer> 
 
