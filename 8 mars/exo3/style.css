@@ -62,4 +62,57 @@ style largeur site
             margin: 2rem auto;
 
             }
+
+            section{
+                margin-bottom: 4rem;
+
+            }
+
+/*/
+Mise en forme typographique
+*/
+        .presentation{
+            /*Modifier la police d ela font*/
+            font-family: arial, 'Times New Roman', Times, serif;
+            /*Modifier la taille de la police*/
+            font-size: 1.7rem; 
+            /*Modifier l'interlignage*/
+            line-height: 1.5em; 
+            /*Modifier la graisse de font*/
+            font-weight: bold;
+            /*Ajouter une ombre portée à la font*/
+            text-shadow: .5rem .5rem .5rem burlywood;
+            /*Modifier la casse de la font*/
+            text-transform: uppercase; 
+            /*Modifier le style de la font*/
+            font-style:italic;
+            /*Modifier la décoration de la font*/
+            text-decoration: underline; 
+            margin: 4rem;
+            padding: 2rem;
+            background-color: salmon;
+            color: white;
+        }
+
+
+/*
+Utilisation des couleurs
+*/
+
+            #portofolio{
+                background-color:darkblue;
+                color:white;
+               
+          
+}
+            #portofolio article{
+                background-color: #FF9800;
+                padding: 2rem;
+                margin:1rem;
+                color: black;
+
+            /*Faire en sorte d'afficher les articles sur 3 colonnes*/
+            display: inline-block;
             
+
+            }
