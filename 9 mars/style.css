@@ -1,0 +1,65 @@
+/*
+Style Reset
+*/
+
+    /*Supprimer toutes les marges- L'étoile (*) s'applique à toute les balises de la page*/
+    *{
+        margin:0;
+        padding: 0;
+    }
+
+    /*Faire en sorte que 1rem=10px donc 1.5rem=15px*/
+    html{
+        font-size: 62.5%; 
+    }
+
+    body{
+        font-size: 1.5rem;
+        /*police de toute la page*/
+        font-family: Arial, Helvetica, sans-serif;    
+        
+        }
+
+    /*Supprimer la décoration des balises a*/
+    a{
+        text-decoration: none;
+
+    }
+
+    /*Faire en sorte que les images ne dépassent pas leur parent*/
+
+    img{
+        max-width: 100%;
+    }
+
+    /*référence couleur pour le header*/
+
+    header{
+      
+       text-align: center;
+       color:white;
+       background-color: #18BC9C;
+    
+    }
+
+    nav{
+        background-color: #2C3E50;
+        /*mettre en majuscule*/
+        text-transform: uppercase;
+        /*Aligner texte à gauche*/
+        text-align: left;
+    }
+
+    
+        /*Nav a suffit ici car toute les balises sotn vertes. Sinon il aurait fallu mettre <li> a*/
+    nav a {
+        color: white;
+        font-weight: bold;
+    }
+
+        /*Pour mettre Portofolio, about contact... aligné*/
+    li {
+        display: inline-block;
+        margin-right: 1rem;
+       
+    }
