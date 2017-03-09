@@ -36,6 +36,20 @@ Style Reset
         padding: 6rem;
     }
 
+
+/*
+Style largeur maximum
+*/
+    nav ul, #portofolio, #about p, #contact, footer section{
+        /*Définir une largeur maximum*/
+        max-width: 90rem;
+
+        /*Centrer une balise de type block dans son parent*/
+        margin: auto;
+
+    }
+
+
     /*référence couleur pour le header*/
 
     header{
