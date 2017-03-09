@@ -33,11 +33,9 @@
 
                             <!--Le contenu principal de la page-->
   <main>  
-         <section>
+         <section id="portfolio">
                  <h2>Portofolio</h2>
-         </section>
-                                    
-                 <article>
+                       <article>
                             <!--a href=lien-->
                          <a href="#">Loupe</a>   
                          <img src="imgbootstrap/cabin.png" alt="photo de cabin">
@@ -62,15 +60,24 @@
                           <a href="#">Loupe</a>   
                          <img src="imgbootstrap/submarine.png" alt="photo de submarine">
               </article>
+                
+                <article>
+                          <a href="#">Loupe</a>   
+                         <img src="imgbootstrap/safe.png" alt="photo de safe">
+              </article>
 
-             <section>
-                  <h2>About</h2>
-                  <p2>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization. Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p2>
-             </section>
+         </section>
 
-            <section>
-                    <h2>Contact me</h2>
-        
+           <section id="about">
+                   <h2>about</h2>
+                   <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization. Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+  <a href="#"> download theme </a>
+         </section>
+
+
+          <section id="contact">
+                  <h2>contact</h2>
+                  
             <!--Création de questionnaire-->
             <!--Action c'est pour le php--> 
             <!--# car pas de valeur-->
@@ -78,21 +85,19 @@
             <form action="#">
 
                   <!--Ajouter des champs Input est une balise auto fermante donc pas de / et placeholder pour enlever le name au moment ou j'écris-->
-                <input type="text" placeholder="Name"> 
-                <input type="email" placeholder="Email"> 
+                <input type="text" placeholder="name"> 
+                <input type="email" placeholder="email"> 
                 <input type="text" placeholder="phone number"> 
                 <!--texte area Pour avoir plus de place pour laisser un message lors d'un formulaire-->
                 <textarea placeholder="Message"></textarea>
 
                 <input type="submit" value="Send"> 
-
-                
+               
             </form>
 
+         </section> 
 
-        </section>
-
-
+                                    
      </main>
 
                             <!--La fermeture de la page-->
@@ -112,14 +117,17 @@
                                 <article>
                                         <h3>About freelancer</h3>
                                         <!--target="blank"= ouvrir vers une nouvelle fenêtre-->
-                                        <p> Freelance is a free to use, open source Bootstrap theme created by a<ref="#" target="_blank"> Start Bootstrap.</p>    
+                                        <p>Freelance is a free to use, open source Bootstrap theme created by <a href="
+                                        http://google.com" target="_blank">Start Bootstrap</a></p>    
                                 </article>
 
                     </section>
 
-                    
+
                     <!--Aside=Contenu qui ne sont pas en rapport direct avec le contenu de la page ou dans la zone-->
-                    <aside>Under MIT Licence</aside>
+                    <aside>
+                            <p>Under MIT Licence</p>      
+                   </aside>
 
          </footer>
 

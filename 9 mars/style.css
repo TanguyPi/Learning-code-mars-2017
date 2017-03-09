@@ -32,6 +32,10 @@ Style Reset
         max-width: 100%;
     }
 
+    section{
+        padding: 6rem;
+    }
+
     /*référence couleur pour le header*/
 
     header{
@@ -39,6 +43,8 @@ Style Reset
        text-align: center;
        color:white;
        background-color: #18BC9C;
+       padding-bottom: 6rem;
+       
     
     }
 
@@ -48,6 +54,11 @@ Style Reset
         text-transform: uppercase;
         /*Aligner texte à gauche*/
         text-align: left;
+        /*Ajouter une marge intérieure de 20px*/
+        padding:2rem;
+        /*Ajouter une marge exétrieure en bas de 30px*/
+        margin-bottom: 6rem;
+    
     }
 
     
@@ -57,9 +68,174 @@ Style Reset
         font-weight: bold;
     }
 
-        /*Pour mettre Portofolio, about contact... aligné*/
-    li {
-        display: inline-block;
-        margin-right: 1rem;
-       
+  h1{
+      /*Ajouter une marge extérieure*/
+        padding-top: 3rem;
+        font-size: 6rem;
+        text-transform: uppercase;
+        
     }
+
+    h2 {
+        /*Aligner le texte au centre*/
+        text-align: center;
+        /*Modifier la casse cad majuscule ou minus*/
+        text-transform: uppercase;
+        /*Ajouter une marge extérieure en bas de 30px*/
+        margin-bottom: 3rem;
+    }
+
+
+    h3{
+         text-transform: uppercase;
+         font-size: 2.5rem;
+         margin-bottom: 3rem;
+    }
+
+    header p{
+        font-size: 2rem;
+        
+    }
+
+        /*Pour mettre Portofolio, about contact... aligné*/
+    li {display: inline-block;
+        margin-right: 1rem;   
+}
+        
+
+/*
+Style portofolio
+*/
+
+
+    #portfolio{
+        /*Centrer dans la largeur tous les éléments in-line*/
+        text-align: center;
+
+    }
+
+    #portfolio a{
+        /*masquer les balises*/
+        display: none;
+}
+
+    #portfolio article{
+       /*Ajouter une marge extérieure de 10px*/
+       margin: 1rem;
+       
+        /*Créer 3 colonnes*/
+        display: inline-block;
+        width: 29%;
+    }
+
+/*
+Style about me
+*/
+
+    #about{
+        /*Modifier la couleur de fond*/
+         background-color: #18BC9C;
+         
+         /* Modifier la couleur des textes*/
+         color: snow;
+         text-align: center;
+
+}
+
+    #about p{
+        /*Afficher les textes sur deux colonnes; webkit colum pour safari etc et moz column pour firefox*/
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+
+        text-align: justify;
+        
+        margin-bottom: 4rem;
+
+    }
+
+    #about a{
+
+        color: snow;
+        border: .3rem solid snow;
+        padding: 1rem 1.5rem;
+        font-weight: bold;
+
+        /*Créer un bord arrondi*/
+        -webkit-border-radius: 1rez;
+        -moz-border-radius: 1rem;
+        border-radius: 1rem;
+    }
+
+
+
+/*
+Style contact
+*/
+
+    input, textarea {
+        display: block;
+        width: 100%;
+        margin: 1rem auto;
+        padding: 1rem;
+        font-size: 2rem;
+
+        /*Annuler le style du navigateur*/
+        border: none;
+
+        /*Redéfinir la bordure*/
+        border-bottom: 1rem solid snow
+
+    }
+
+    textarea{
+        /*Définir une hauteur minimum*/
+        min-height: 15rem;
+    }
+
+    /*Sélectionner une balise grace à son attribut et sa valeur*/
+
+    [type="submit" ]{
+        width: 10rem;
+        display: inline-block;
+        background: #18BC9C;
+        color:white;
+        font-weight: bold;
+        margin-left: 3rem;
+
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: .5rem;
+        border-radius: .5rem;
+
+    }
+
+
+
+/*
+style footer
+*/
+
+    footer{
+        color: white;
+        text-align: center;
+        background: #2C3E50;
+
+    }
+
+    footer article{
+        display: inline-block;
+        width: 29%;
+
+
+        /*Gérer l'alignement vertical*/
+        vertical-align: top;
+
+    }
+
+
+        /*Sélectionner une balise grâce à son attribut et sa valeur*/
+        
+        [href="http://google.com"]{
+            color: #18BC9C;
+        }
+        
