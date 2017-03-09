@@ -101,9 +101,7 @@ Utilisation des couleurs
 
             #portofolio{
                 background-color:darkblue;
-                color:white;
-               
-          
+                color:white;     
 }
             #portofolio article{
                 background-color: #FF9800;
@@ -113,6 +111,5 @@ Utilisation des couleurs
 
             /*Faire en sorte d'afficher les articles sur 3 colonnes*/
             display: inline-block;
-            
 
             }
