@@ -1,0 +1,102 @@
+
+/*Importer des fichiers css style font awesome. C'est lienlien CDN sur bootstrap. Il faut trouver ensutie l'icone sur font awesome et l'importer dans le html. */
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+
+nav{
+    text-align: right;
+    position: relative; 
+}
+
+nav li{
+    display: inline-block;
+}
+
+    /*Sélectionner le premier enfant donc bootstrape ici*/
+nav li:first-child{
+    position: absolute;
+    left: 0;
+}
+
+    /*Sélectionner le dernier enfant donc contact*/
+
+nav li:last-child{
+
+    font-size: 3rem;
+}
+
+    /*Sélectionner le deuxième enfant donc portofolio*/
+
+nav li:nth-child(3){
+    background: red;
+}
+
+    /*Sélectionner la première balise rencontrée*/
+header p:first-of-type{
+
+    font-size: 4rem;
+}
+
+    /*Sélectionner une balise par son attribut et sa valeur*/
+header [alt="photo de profile"]{
+    width: 3em;
+}
+
+
+    /*Extraire une balise de la sélection*/
+
+textarea, input:not([type"submit"]){
+    
+    display: block;
+    width: 100%;
+}
+
+    /*Sélecteur d'élement adjacent cad photo après une balsie ici*/
+a+img {
+    width: 2rem;
+}
+
+
+
+    /*selecteur d'enfant de premier niveau en l'occurence me test car première balise après le main*/
+main > a {
+
+    font-size: 3rem;
+
+}
+
+
+
+
+    /*Ajouter un pseudo-élement à la fin de la balie h1*/
+ h1:after{
+        /*Ajouter du contenu dans le pseudo-élément qui est comme une psedo balise html mais qui n'éxiste pas. On ne peut pas le sélectionner avec la souris par ex comme un trait de présentation*/
+    content: "";
+    display: block;
+    height: .2rem;
+    width: 10rem;
+    margin: 1rem auto;
+    background: grey;
+
+    }
+
+        /*Ajouter un pseudo-élément au début de la balise h1*/
+
+ h1:before{
+     content: "\f005";
+     position: absolute;
+     top: 2.2rem;
+     left: 49%;
+     background: white;
+ 
+    /*Font Awesome Like*/
+    font-family: FontAwesome;
+
+ }   
+
+
+
+ h1{
+     /*Bloquer les enfants dans le parent cad qu'ils bougent pas */
+     position: relative;
+ }
