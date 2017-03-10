@@ -1,0 +1,309 @@
+
+/*Importer des fichiers css style font awesome. C'est lienlien CDN sur bootstrap. Il faut trouver ensutie l'icone sur font awesome et l'importer dans le html. */
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+
+/*
+Style Reset
+*/
+
+    /*Supprimer toutes les marges- L'étoile (*) s'applique à toute les balises de la page*/
+    *{
+        margin:0;
+        padding: 0;
+    }
+
+    /*Faire en sorte que 1rem=10px donc 1.5rem=15px*/
+    html{
+        font-size: 62.5%; 
+    }
+
+    body{
+        font-size: 1.5rem;
+        /*police de toute la page*/
+        font-family: Arial, Helvetica, sans-serif;    
+        
+        }
+
+    /*Supprimer la décoration des balises a*/
+    a{
+        text-decoration: none;
+
+    }
+
+    /*Faire en sorte que les images ne dépassent pas leur parent*/
+
+    img{
+        max-width: 100%;
+    }
+
+    section{
+        padding: 6rem;
+    }
+
+
+/*
+Style largeur maximum
+*/
+    nav ul, #portofolio, #about p, #contact, footer section{
+        /*Définir une largeur maximum*/
+        max-width: 90rem;
+
+        /*Centrer une balise de type block dans son parent*/
+        margin: auto;
+
+    }
+
+
+    /*référence couleur pour le header*/
+
+    header{
+      
+       text-align: center;
+       color:white;
+       background-color: #18BC9C;
+       padding-bottom: 6rem;
+       
+    
+    }
+
+    nav{
+        background-color: #2C3E50;
+        /*mettre en majuscule*/
+        text-transform: uppercase;
+        /*Aligner texte à gauche*/
+        text-align: left;
+        /*Ajouter une marge intérieure de 20px*/
+        padding:2rem;
+        /*Ajouter une marge exétrieure en bas de 30px*/
+        margin-bottom: 6rem;
+        /*on décale toute la nav à droite*/
+        text-align: right;
+    
+    }
+
+
+/*Bloquer les enfants dans leur parent */
+    nav ul{
+        position: relative; 
+       
+        
+    }
+/*on décal à gauche bootstrap. On sort la balise du flux pour la repositionner précisément*/
+    #decalgauche{
+        position: absolute;
+        left:0;
+        font-size: 2rem;
+
+    }
+    
+        /*Nav a suffit ici car toute les balises sotn vertes. Sinon il aurait fallu mettre <li> a*/
+    nav a {
+        color: white;
+        font-weight: bold;
+        
+    }
+
+  h1{
+      /*Ajouter une marge extérieure*/
+        padding-top: 3rem;
+        font-size: 6rem;
+        text-transform: uppercase;
+        
+    }
+
+    h2 {
+        /*Aligner le texte au centre*/
+        text-align: center;
+        /*Modifier la casse cad majuscule ou minus*/
+        text-transform: uppercase;
+        /*Ajouter une marge extérieure en bas de 30px*/
+        margin-bottom: 3rem;
+    }
+
+
+    h3{
+         text-transform: uppercase;
+         font-size: 2.5rem;
+         margin-bottom: 3rem;
+    }
+
+    header p{
+        font-size: 2rem;
+        
+    }
+
+        /*Pour mettre Portofolio, about contact... aligné*/
+    li {display: inline-block;
+        margin-right: 1rem;   
+}
+        
+
+/*
+Style portofolio
+*/
+
+
+    #portfolio{
+        /*Centrer dans la largeur tous les éléments in-line*/
+        text-align: center;
+
+    }
+
+    #portfolio article{
+       /*Ajouter une marge extérieure de 10px*/
+       margin: 1rem;
+       
+        /*Créer 3 colonnes*/
+        display: inline-block;
+        width: 29%;
+
+        /*Bloquer les enfants dans leur parent*/
+        position: relative;
+        
+    }
+
+#portfolio a{
+      font-size: 5rem;
+      color: white;
+      background: rgba(24, 188, 156, .7);
+      
+      /*Sortir la balise du flux pour la positionner precisement*/
+      position: absolute;
+
+      /*Placer la balise en haut à gauche*/
+      top: 0;
+      left:0;
+
+      /*Faire en sorte que la balise soit à 100% de la taille de son parent*/
+      width: 100%;
+      height: 100%;
+
+      /*Baisser ou augmenter l'opacité. si opacité=0 la loupe disparait. La loupe(ref) et l'image(img) sont dans la balise. */
+      opacity: 0;
+
+    
+      /*Gérer une transition entre les états de la balise*/
+      -webkit-transition: ;
+      transition: 1;
+
+}
+
+      /*Modifier l'opacité de la balise en hover(qd tu passes la souris au dessu et qu'il y a une tite animation)*/
+     
+     #portfolio a:hover{
+     opacity: 1;
+
+}
+
+/*
+Style about me
+*/
+
+    #about{
+        /*Modifier la couleur de fond*/
+         background-color: #18BC9C;
+         
+         /* Modifier la couleur des textes*/
+         color: snow;
+         text-align: center;
+
+}
+
+    #about p{
+        /*Afficher les textes sur deux colonnes; webkit colum pour safari etc et moz column pour firefox*/
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+
+        text-align: justify;
+        
+        margin-bottom: 4rem;
+
+    }
+
+    #about a{
+
+        color: snow;
+        border: .3rem solid snow;
+        padding: 1rem 1.5rem;
+        font-weight: bold;
+
+        /*Créer un bord arrondi*/
+        -webkit-border-radius: 1rez;
+        -moz-border-radius: 1rem;
+        border-radius: 1rem;
+    }
+
+
+
+/*
+Style contact
+*/
+
+    input, textarea {
+        display: block;
+        width: 100%;
+        margin: 1rem auto;
+        padding: 1rem;
+        font-size: 2rem;
+
+        /*Annuler le style du navigateur*/
+        border: none;
+
+        /*Redéfinir la bordure*/
+        border-bottom: 1rem solid snow
+
+    }
+
+    textarea{
+        /*Définir une hauteur minimum*/
+        min-height: 15rem;
+    }
+
+    /*Sélectionner une balise grace à son attribut et sa valeur*/
+
+    [type="submit" ]{
+        width: 10rem;
+        display: inline-block;
+        background: #18BC9C;
+        color:white;
+        font-weight: bold;
+        margin-left: 3rem;
+
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: .5rem;
+        border-radius: .5rem;
+
+    }
+
+
+
+/*
+style footer
+*/
+
+    footer{
+        color: white;
+        text-align: center;
+        background: #2C3E50;
+
+    }
+
+    footer article{
+        display: inline-block;
+        width: 29%;
+
+
+        /*Gérer l'alignement vertical*/
+        vertical-align: top;
+
+    }
+
+
+        /*Sélectionner une balise grâce à son attribut et sa valeur*/
+        
+        [href="http://google.com"]{
+            color: #18BC9C;
+        }
+        
