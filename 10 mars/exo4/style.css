@@ -94,8 +94,6 @@ main > a {
 
  }   
 
-
-
  h1{
      /*Bloquer les enfants dans le parent cad qu'ils bougent pas */
      position: relative;
