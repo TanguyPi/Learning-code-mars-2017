@@ -36,8 +36,8 @@ a:hover{
         transition-timing-function: ease-in;
 
         /*Ajouter un délai avant la transition*/
-        -webkit-transition-delay: 4s;
-        transition-delay: 4s;
+        -webkit-transition-delay: 2s;
+        transition-delay: 2s;
 
  }
 

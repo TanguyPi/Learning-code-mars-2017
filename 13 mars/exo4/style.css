@@ -1,0 +1,82 @@
+/*La section fait le tour de l'écran*/
+
+    /*Définir les @keyframes*/
+
+    @-webkit-keyframes moveMySection{
+ 
+        /*Définir chaque étape de l'animation*/
+            /*début de l'animation. La section est en haut à gauche*/
+            0%{top:0; left:0; }
+            /*en haut à droite*/
+            25%{top:0; left:53.5rem; }
+            /*en bas à droite*/
+            50%{top:55rem; left:53.5rem; }
+            /*en bas à gauche*/
+            75%{top:55rem; left:0; }
+            /*100% c'est la fin de l'animation. C'est afin de faire une boucle*/
+            100%{top:0; left:0; }
+
+}
+
+    @keyframes moveMySection{ 
+
+        /*Définir chaque étape de l'animation*/
+            /*début de l'animation. La section est en haut à gauche*/
+            0%{top:0; left:0; }
+            /*en haut à droite*/
+            25%{top:0; left:53.5rem; }
+            /*en bas à droite*/
+            50%{top:55rem; left:53.5rem; }
+            /*en bas à gauche*/
+            75%{top:55rem; left:0; }
+            /*100% c'est la fin de l'animation. C'est afin de faire une boucle*/
+            100%{top:0; left:0; }
+
+    }
+
+section{
+    height: 5rem;
+    width: 5rem;
+    background: red;
+    /*On cale la section en haut à gauche*/
+    position: absolute;
+    top: 0;
+    left: 0;
+
+     /*Appliquer l'animation*/
+            animation-name: moveMySection;
+            animation-duration: 2s;
+
+     /*Modifier la corube d'animation- On est obligé d'ajouter un webkite à chaque fois*/
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+
+    /*Ajouter un délai avant l'animation*/
+            -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+
+    /*Gérer le nombre de boucle*/
+            -webkit-animation-iteration-count: 3s;
+            animation-iteration-count: 3s;
+
+    /*Gérer le sens de l'animation*/
+            -webkit-animation-direction: alternate-reverse;
+            animation-direction: alternate-reverse;
+
+}
+
+section:nth-child(2){
+    background: blue;
+
+     /*Gérer le sens de l'animation*/
+            -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+}
+
+section:nth-child(3){
+    background: orange;
+
+    /*Gérer le sens de l'animation*/
+            -webkit-animation-direction: ease-out;
+            animation-direction: ease-out;
+
