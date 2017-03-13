@@ -1,0 +1,92 @@
+
+
+
+
+/*Style reset*/
+
+    /*Supprimer toute les marges*/
+        *{
+            margin:0;
+            padding:0;
+
+        }
+
+    /*Configurer la valeur 1rem=10px*/
+    html{
+        font-size:62.5%;
+    }
+
+    body{
+        /*Ne jamais définir les propriéts width ou height sur le body*/
+        /*1.5 rem=15px*/
+        font-size: 1.5rem; 
+        /*Centrer le texte*/
+        text-align:center; 
+    }
+    
+    header, main, footer{
+        /*Limite la largeur*/
+        max-width: 50rem;
+        margin: 2rem auto;
+        padding: 2rem;
+
+
+    }
+
+    header{
+        /*couleur du header*/
+        background: grey;
+        /*largeur max du header*/
+        max-width: 50rem;
+        padding: 2rem;
+
+        /*Centrer la balaise dans la page html*/
+        margin: 2rem auto;
+
+        /*Bloquer les enfants dans leurs parents cad rester dans le gris */
+        position: relative; 
+           }
+        
+        
+    /*Sélectionner la première li du header donc Home*/
+    header li:first-child{
+        position: absolute;
+        /*Au lieu de mettre rigth 0; on aligne tout sur 2rem*/
+        right: 2rem;
+
+        /*Derrière balise li se retrouve à gauche donc facebook*/
+    }
+
+    header li:last-child{
+        position: absolute;
+        left: 2rem;
+    }
+ 
+    nav li{
+        /*style header de about contact etc*/
+        /*Aligner les balises li de nav*/
+    display: inline-block;
+    
+    }
+
+/*Style main*/
+
+    /*Exclure le input de la sélection ecrire input type submit)*/
+    label, textarea, input:not( [type="submit"] ){
+        display:block;
+        width: 100%;
+    }
+
+/*Style footer*/
+
+    /*Faire en sorte que le footer soit toujours collé en bas de la page*/
+    footer{
+        position: fixed;
+        background: grey;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        /*Permet d'élargir le footer et donc de le replacer*/
+        max-width: 100%;
+
+    }
