@@ -1,0 +1,234 @@
+/*Style reset*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+        /*Configurer l'utilisation de 1rem=10px*/
+    html{
+    font-size: 62.5%;
+}
+
+    /*Il faut éviter de toucher un maximum le body*/
+    body{
+        font-size: 1.5rem;
+        /*Pour ajouter police ne pas oublier d'ajouter les carectère de la font-family visible  dans google font plus ajouter le regular 400 ici.*/
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    /*Supprimer le soulignement des liens*/
+    a{
+        text-decoration: none;
+        color: #349aa6;
+    }
+
+       /*Appliquer un design différent sur une balise h1*/
+    h1{
+        font-size: 1.5rem;
+        line-height: 1.8em;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 4rem;
+    }
+
+    h1 b{
+        font-size: 2em;
+        display: block;
+    }
+
+    h1 span{
+        text-transform: lowercase;
+    }
+
+    h2, h3 {
+        text-transform: uppercase;
+        /*Utiliser la police google font regular*/
+        font-weight: 400;
+        font-size: 2.2rem;
+
+    }
+
+    span{
+        text-transform: lowercase;
+
+}
+
+    section{
+        padding: 4rem 2rem;
+
+    }
+
+    p{
+        padding: 4rem;
+    }
+
+/*Style header*/
+
+    header{
+        color: white;
+
+
+        /*Insérer une image de fond- utiliser url + juste img (parfois utiliser deux ..)car le fichier css n'est pas au même niveau*/
+        background-image: url(img/img-couverture-iphone.jpg);
+
+        /*Positionner l'image de fond*/
+         background-position: top;
+
+         /*Modifier la taille de l'image de fond*/
+         background-size: 150%;
+
+         /*Bloquer l'image de fond*/
+         background-attachment: fixed;
+    }
+
+
+    nav{   
+        background: #002a35;
+        /*Décaler un peu le lien twitter et le lien grtgaz*/
+        padding: 1rem;
+        /*eloigner le texte du logo*/
+        margin-bottom: 4rem;
+    }
+
+    li{
+        display: inline-block;
+        width: 45%;
+       
+    }
+
+ 
+/*Sélectionner une balise grâce à son attribut*/
+    [src="img/logo-GRT-gaz-blanc.png"]{
+        margin-bottom: 4rem;
+        width: 15rem;
+    }
+
+    /*Sélectionner une balise suivante- Design du carré vert */
+    h1 + a{
+        background: #349aa6;
+        /*Les balises de type inline ne peuvent pas recevoir les propriétés width et height sans la balise display*/
+        display: inline-block;
+        height: 5rem;
+        width: 5rem;
+        /*Eloigner de la bordure du bas vers le haut*/
+        margin-bottom: 8rem;
+        /*D'un carré à un rond*/
+        border-radius: 50%;    
+       
+    }
+
+    a img{
+        padding: .8rem;
+      
+    }
+
+
+
+/*Style le main*/
+
+    /*Selection de la deuxième section*/
+    section:nth-child(2), section:nth-child(4){
+
+        /*selection image et modif*/
+        background-image: url(img/img-foule.jpg);
+        background-attachment: fixed;
+        background-position: center;
+
+        /*ecriture*/
+        color:white;
+        
+    }
+
+    /*selection de la balise a dans la section2 et section 4*/
+    section:nth-child(2) a, section:nth-child(3) a, section:nth-child(4) a{
+        color:white;
+        border: .1rem solid white;
+        /*bordure trop près du texte. C'est moche donc toucher au display*/
+        display: inline-block;
+        /*Elargir le cadre*/
+        padding: 1.5rem;
+        /*bordures de la case arrondies*/
+        border-radius: .5rem;
+        /*Pour éloigner du texte au dessus*/
+        margin-top: 2rem;
+    }
+
+
+  /*selection de la balise a dans la section3*/
+  section:nth-child(3){
+    color: white;
+    background: #349aa6;
+
+    color:white;
+        border: .1rem solid white;
+        /*bordure trop près du texte. C'est moche donc toucher au display*/
+        display: inline-block;
+        /*Elargir le cadre*/
+        padding: 1.5rem;
+        /*bordures de la case arrondies*/
+        border-radius: .5rem;
+        /*Pour éloigner du texte au dessus*/
+        margin-top: 2rem;
+
+  }
+
+  figure{
+      /*placer le texte et les images. padding 2 en haut et en bas et 0 à gauche et à droite*/
+      padding: 2rem 0;
+  }
+
+
+    /*Placer logo section 5*/
+[alt="logo salon des maires"]{
+    width: 10rem;
+    margin-bottom: 2rem;
+
+}
+
+    /*Section 6 : La vidéo*/
+    section:nth-child(6){
+        background-color: #349aa6;
+
+        /*Bloquer les enfants dans le parents*/
+        position: relative;
+       
+     }
+       video{
+        position: relative;
+        top:0;
+        left: 0;
+        height: 100;
+    }
+
+    section:nth-child(6) article{
+        color:white;
+        background: rgba(0, 0, 0, 7);
+        padding: 4rem 2rem;
+
+        /*Faire passer la balise sur la première couche (video)*/
+        position: relative;
+        z-index: 1;
+
+     }
+    
+    section:nth-child(6) h3{
+            font-weight: 900;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+
+    }
+
+    section:nth-child(6) a{
+        color: white;
+
+    }
+   
+    
+    
+    
+
