@@ -1,6 +1,9 @@
-/*Style reset*/
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900');
+
+/*Style reset*/
+
+
 
 *{
     padding: 0;
@@ -56,7 +59,7 @@
     span{
         text-transform: lowercase;
 
-}
+    }
 
     section{
         padding: 4rem 2rem;
@@ -65,6 +68,11 @@
 
     p{
         padding: 4rem;
+    }
+
+    /*Pour que quand tu réduis l'écran les images se touchent pas mais s'ordonnent*/
+    img{
+        max-width: 100%;
     }
 
 /*Style header*/
@@ -118,8 +126,8 @@
         /*Eloigner de la bordure du bas vers le haut*/
         margin-bottom: 8rem;
         /*D'un carré à un rond*/
-        border-radius: 50%;    
-       
+        border-radius: 50%;     
+
     }
 
     a img{
@@ -158,9 +166,11 @@
         margin-top: 2rem;
     }
 
+    /*Il manque la section 5*/
 
-  /*selection de la balise a dans la section3*/
-  section:nth-child(3){
+
+  /*selection de la balise a dans la section3 puis 7 et footer car elles ont les mêmes propriétés css*/
+  section:nth-child(3), section:nth-child(7), footer{
     color: white;
     background: #349aa6;
 
@@ -183,6 +193,7 @@
   }
 
 
+
     /*Placer logo section 5*/
 [alt="logo salon des maires"]{
     width: 10rem;
@@ -196,8 +207,13 @@
 
         /*Bloquer les enfants dans le parents*/
         position: relative;
-       
+           
+    
+
+     /*Masquer les balises qui dépassent du parent cad la video*/
+     overflow: hidden
      }
+
        video{
         position: relative;
         top:0;
@@ -228,7 +244,61 @@
 
     }
    
-    
-    
-    
+  
+   section:nth-child(7) figure{
+       display: inline-block;
+       /*Taille de l'image par rapport à cellle des parents. */
+       width: 49%;
+       /*Alignement des images qui marchent que pour des balises en display inline block*/
+       vertical-align: top;
 
+   }
+
+   /*Présentation-réduire le logo. On fait cela car c'est la seul image qui suit après un article donc facile à selectionner*/
+   article + img{
+       width: 15rem;
+       margin-bottom: 4rem;
+   }
+   
+   /*Pour pouvoir utiliser google maps sans aller sur le site.*/
+    iframe{
+        border:none;
+        width: 100%;
+        min-height: 30rem;
+        
+    }
+
+    /*Pour le footer*/
+    footer{
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+
+
+/*Animation-ne fonctionne mais sert à animer les ptits logos-revoir fonctionnement*/
+
+@-webkit-keyframes pictoHeaderAnim{
+    0% {transform: translateY(0);}
+    50% {transform:translateY(1rem);}
+    100% {transform: translateY(0);}
+
+
+@keyframes pictoHeaderAnim{
+    0% {transform: translateY(0);}
+    50% {transform:translateY(1rem);}
+    100% {transform: translateY(0);}
+
+
+
+/*Appliquer l'animation*/
+-webkit-animation-name: pictoheaderanim;
+animation-name: pictoheaderanim;
+
+/*Définir la durée*/
+-webkit-nimation-duration: 1s;
+animation-duration: 1;
+
+/*Définir le nombre de boucle*/
+-webkit-iteration-count: infinite;
+animation-iteration-count: infinite;
