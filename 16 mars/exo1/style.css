@@ -26,7 +26,6 @@ body{
 
 img{
     max-width: 100%;
-
 }
 
 a{
@@ -37,7 +36,12 @@ header{
     background-image: url(img/header.jpg);
     /*Image en tant que couverture*/
     background-size: cover;
-    padding: 16rem 2rem 8rem 2rem;    
+    padding: 16rem 2rem 8rem 2rem;   
+
+}
+
+header a{
+    color:#F05F40;
 }
 
 header > a, main section a{
@@ -54,7 +58,6 @@ main section:first-child > a, main section:nth-child(4) > a, {
     background-color: white;
 }
 
-
 nav{
     background: white;
     /*Qd tu scrall la nav reste*/
@@ -64,19 +67,31 @@ nav{
     width: 100%;
     padding: 2rem; 
     text-align: right;
-    
+    border-bottom: .1rem solid rgba(255, 255, 255, .3);
+
 }
+
 
 nav ul {
     display: none;
 }
 
-nav > a{
-    position: absolute;
-    left: 2rem;
-    
+
+nav a{
+    color: #222;
 }
-    
+
+nav a:hover{
+    color:#F05F40;
+}
+
+li{
+    font-weight: 700;
+    padding: 0;
+    margin: 1rem auto;
+
+}
+    /*Sous-titre*/
 
 h1,h2,h3,{
     margin-bottom:1rem;
@@ -91,12 +106,10 @@ h2{
     padding-top:3rem;
 }
 
-p{
-    padding:2rem;
-}
+    /*Paragraphe*/
 
 
-        /*Décorer les fin de section et enlevé celle qui l'ont été en trop la section 4*/
+    /*Décorer les fin de section et enlevé celle qui l'ont été en trop la section 4*/
 h1:after, h2:after{
     content: " ";
     background: #F05F40;
@@ -129,6 +142,41 @@ header a{
     
 }
 
+/*Style section 2*/
+
+    section:nth-child(2){
+        color: #222;
+        padding: 4rem 2rem;
+    }
+
+            /*Aggrandissmeent des émoticones .fa*/
+    section:nth-child(2) .fa{
+        font-size: 4rem;
+        color: #F05F40;
+    }
+
+    h3 + p {
+        color: grey;
+        margin-bottom: 4rem;
+    }
+
+
+
+
+
+
+
+
+
+/*Temps de transition au moment de passage sur la souris*/
+ a, figcaption, nav p{
+     text-decoration: none;
+
+    -webkit-transition: all .5s;
+     transition: all .5s;
+    }
+
+
 /*section1*/
 
 main section:first-child{
@@ -153,13 +201,51 @@ main section:first-child p{
  }
 
 
-    /*Section 4*/
+/*section 3- caler images*/
+
+figure{
+    width:33.333%;
+    /*Obligé dans la section 4 d'utiliser clear-both car le float va tjs dans la balise suivante.*/
+    float: left;
+    line-height: 0;
+    position:relative;
+}
+
+figcaption{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left:0;
+    line-height: 1;
+    background: rgba(240,95,64,.9);
+    opacity: 0;
+
+}
+
+figcaption a{
+    top: 50%;
+    left: 50;
+    position: absolute;
+    width: 80%;
+}
+
+figcaption:hover{
+    opacity: 1;
+     }
+
+/*Section 4*/
 main section:nth-child(4){
     background: #222;
     color:white;
     padding:2rem;
-    margin-bottom: 5rem;
+    padding: 4rem 2rem 6rem 2rem;
+    clear:both;
 }
+
+ section:nth-child(4) h2{
+        margin-bottom: 4rem;
+    }
 
 
 
@@ -171,3 +257,15 @@ main section:first-child > a, main section:nth-child(4) >a{
 
      }
    
+
+
+
+
+/*Footer*/
+footer{ 
+padding: 2rem 4rem;
+}
+
+
+
+                /*Ajouter les médias 650-850*/
