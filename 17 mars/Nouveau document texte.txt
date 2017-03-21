@@ -1,0 +1,34 @@
+			SEO-17/03/2017
+
+-Si le site est en développement, possibilité de cocher sur WP une case pour pas que le site soit réferencé. 
+OU possibilité de le mettre dans le code dans la <head> meta name.
+
+
+-A placer à la racine du texte quand le site est pas dév:
+	robots.txt: User-agent:*
+		Disallow:/
+
+-Quand le site est en ligne:(voir site robots.txt.com)
+	robots.txt:
+			Suppr Disallow:/
+
+-Possibilité de ne pas indéxer ses images. 
+
+
+
+- URL canonique: sur Wp toute les pages ont un url canonique cad choisir un seul url alors que nous en avons plusieurs. 
+
+
+- tester si le site est indéxé sur google search console. 
+
+
+	- Sur le positionnement dans le moteur de recherche:
+
+		*Provient des liens sur le site, du code, du contenu...
+		
+			* Au niveau du code: avoir un code pur avec 3 fichiers (html,css javascript), des balises correctes...
+
+			* Faire une liste de mots-clés. Quelle cible (débutant, confirmé ?)
+
+			* Ou mettre les mots clés ?: dans la balise tittle très important, meta, url, dans les titres(h), noms des fichiers, strong(mettre en valeur des mots),
+,alternatives aux images et les liens. 
