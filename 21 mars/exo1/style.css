@@ -19,6 +19,11 @@ body{
     text-align: center;
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
+    }
+
+img{
+    max-width: 100%;
+
 }
 
 h1{
@@ -117,6 +122,107 @@ h1{
     }
 
 
+/*Style main*/
+
+main{
+    padding:4rem 2rem;
+}
+
+h2{
+    font-family: 'Cinzel', serif;
+    margin-bottom:1rem;
+ 
+}
+
+
+
+
+
+
+
+/*Portofolio*/
+
+figure{
+    position:relative;
+}
+
+    /*Rajouter du blanc sur une photo*/
+figure:after{
+    content:"";
+    width: 100%;
+    height: 3rem;
+    position:absolute;
+    bottom:0;
+    left:0;
+    background:white;
+  
+    }
+
+
+figcaption{
+    position: absolute;
+    background: white;
+    bottom: 0;
+    padding:1rem;
+    width: 70%;
+    left:50%;
+    font-weight: bold;
+
+    /*Définir les niveaux de couche*/
+    z-index: 1;
+
+    /*Permet de centrer ici*/
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+figcaption span{
+    font-weight: 400;
+    display: block;
+}
+
+
+.portfolioPage article{
+    position:relative;
+    margin:2rem auto;
+  
+  /*Voir le projet disparait de la page*/
+    overflow: hidden;
+}
+
+
+/*Masquer les éléments qui dépassent de la balise*/
+
+
+.portfolioPage main a {
+    color: white;
+    font-weight:bold;
+    background: #FF9158;
+    padding: .5rem 1rem;
+    /*Placer ''le projet'' sur la photo en hauteur*/
+    top:-10%;
+    left:50%;
+
+    /*  Pour que "le projet" apparaisse sur l'image*/
+    z-index:1;
+
+    /*Webkit sert à centrer et transform à centrer de manière responsive*/
+    -webkit-transform:translateX(-50%);
+    transform: translateX(-50%);
+
+    position: absolute;
+    }
+
+    /*Changer la propriété top de la balise A au survol de l'article-L'animation s'arrête presque au milieu de la page*/
+.portfolioPage article:hover a{
+    top:40%;
+}
+
+
+
+
+
+
 
 
 /*Footer*/
@@ -142,5 +248,5 @@ footer a{
     }
 
     footer .fa{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
