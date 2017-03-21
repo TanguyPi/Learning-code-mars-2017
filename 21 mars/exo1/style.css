@@ -125,7 +125,7 @@ h1{
 /*Style main*/
 
 main{
-    padding:4rem 2rem;
+    padding:4rem 2rem 10rem 2rem;
 }
 
 h2{
@@ -235,6 +235,7 @@ footer{
     background:#FF9158;
     color: white;
     font-weight:700;
+    z-index:1000;
 }
 
 footer a{
@@ -250,3 +251,113 @@ footer a{
     footer .fa{
         font-size: 1.5rem;
     }
+
+
+
+    /*Style contact*/
+
+form{
+    margin: 2rem auto;
+}
+
+textarea,input:not([type="submit"]){
+    display:block;
+    width:100%;
+    border:none;
+    /*pointiller*/
+    border-bottom:.1rem dotted;
+    padding: 1rem;
+    margin-bottom:2rem;
+}
+
+textarea{
+    min-height: 10rem;
+}
+
+form :last-child{
+    background: #FF9158;
+    color: white;
+    font-size:1.5rem;
+    font-weight: bold;
+    border: none;
+    padding: .5rem 1rem;
+}
+
+iframe{
+    width: 100%;
+    min-height: 20rem;
+    border: none;
+}
+
+
+
+
+/*Requête media*/
+
+        /*Ecran d'une taille minimal de 400px*/
+        @media screen and (min-width:400px){
+            /*Style portfolio*/
+            .portfolioPage article{
+                display: inline-block;
+                width:49%;
+
+            /*Gérer les paddings*/
+            padding: 0 1rem 0 0;
+        }
+
+            /*On selectionne toutes les deux balises à partir de la deuxième*/
+            .portfolioPage article:nth-child(2n+2){
+                padding: 0 0 0 1rem;
+                 }
+
+         }
+
+
+            
+        /*Ecran d'une taille minimal de 750px qui équivaut à une tablette*/
+        @media screen and (min-width:750px){
+
+
+                /*Style reset*/
+                main, h1,nav{
+                    max-width:85rem;
+                    margin:auto;
+                }
+
+                h1{
+                    font-size:4rem;
+                    /*Déplacer une balise ou le premier mot d'un paragraphe*/
+                    text-indent: 1rem;
+                }
+
+                h1 span{
+                    display:initial;
+                }
+            
+
+                /*Style header*/
+                    /*Masquer le burger*/
+
+                    header{
+                        text-align:left;
+                        
+                    }
+
+                    header > a{
+                        display:none;
+                    }
+
+                    nav{
+                        display: block;
+                        text-indent: 1rem;
+                    }
+
+                    nav li{
+                        display: inline-block;
+                    }
+
+                    /*Style main*/
+                    main{
+                        padding:4rem 0 10rem 0;
+                    }
+        }
