@@ -1,0 +1,253 @@
+
+/*Style Reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html{
+    font-size:62.5%;
+
+}
+
+body{
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+/*Toujours max-width:100%*/
+img{
+    max-width:100%;   
+}
+
+
+
+
+
+
+
+/*Style nav*/
+
+
+a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav{
+    background-image: url(img/back.jpg);
+    background-size: cover;
+    padding:2rem;
+    font-size:1rem;
+    margin-bottom: 2rem;
+    text-align: right;
+}
+
+nav li:first-child{
+    position: absolute;
+    font-size: 2rem;
+    left:0%;
+   
+    
+}
+
+li{
+    position:relative;
+    display:inline-block;
+    left:0;
+    margin-right: 6rem;
+}
+
+main{
+    padding:2rem;
+}
+
+/*Pour selection l'image*/  
+                            /*On aurait pu faire le src car c'est la seule image du site ou h1 + img. */
+                            /*Pas oublier le webkit*/
+.agauche{
+    float:left;
+    /*Ajouter de la margin-right pour mieux placer l'image par rapport au texte*/
+    margin-right:1.5rem;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    /*Largeur d'une image =width*/
+    width:8rem;
+    }
+    
+header > p{
+    text-align:justify;
+}
+
+
+h1{
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    font-size:2.5rem;
+
+}
+
+
+/*On cale des span pour que ça prenne pas tous la alrgeur car span n'est pas une balise block ou mettre les 2 balises p dans un article */
+h2{
+    font-family:'Quicksand', sans-serif;
+    color:white;
+    background:#0b0b2d;
+    font-size:1,5rem;
+    margin-bottom:1.5rem;
+}
+
+h2 span{
+    padding:1rem 1.5rem;
+    display:block;
+}
+
+p{
+    margin-bottom:1rem;
+}
+/*meme distance entre toute les sections*/
+section{
+    margin-bottom:4rem;
+     }
+
+main section:first-of-type{
+    clear: both; 
+  }
+
+main section:first-of-type > article{
+            display: inline-block;
+            width: 49%;
+        }
+
+/*Bloquer le figcaption dans la figure.*/
+figure{
+    position:relative;
+    margin-bottom:1rem;
+    width:24%;
+    display:inline-block;
+  
+}
+
+
+
+figcaption{
+    position:absolute;
+    background:grey;
+    width:100%;
+    /*vu qu'il est bloqué dans l'image on dit left:0;*/
+    left:0;
+    bottom:0;
+    padding:1rem;
+    
+}
+
+
+
+
+
+
+
+main section:last-child article{
+    display:inline-block;
+    width:49%;
+}
+
+
+iframe{
+    
+    height:23rem;
+    width:100%;
+    border:none; 
+      }
+
+
+form{
+    margin:2rem;
+}
+
+textarea, input:not([type="submit"]){
+    display: block;
+    width:100%;
+    border:none;
+    background: #eee;
+    /*padding et margin-bottom pour gérer la mise en forme du formulaire*/
+    padding:1.5rem 1rem;
+    margin-bottom:1rem;
+     }
+
+/*Pour sélectionner la balise envoyer après l'avoir exclue*/
+[type="submit"]{
+    border:none;
+    background: #0b0b2d;
+    padding:1rem 1.5rem;
+    color:white;
+}
+
+  
+textarea{
+    min-height: 15rem;
+}
+
+footer{
+    background-color: #0b0b2d;
+    padding:2rem;
+    text-align: left;
+    font-size:1rem;
+    margin-bottom: 2rem
+}
+
+footer li:last-child{
+    position: absolute;
+    font-size: 2rem;
+    left:80%;
+}
+
+footer li{
+    position:relative;
+    display:inline-block;
+    right:0;
+    margin-left: 5rem;
+ }
+
+
+/*Responsive à partir de 850px- du mobile au desktop*/
+/*
+@media screen and (min-width:950px){
+
+    main{
+        max-width: 85rem;
+        margin:auto;
+    }
+    main{
+        padding:4rem 0;
+    }
+    li:first-child{
+        display:inline-block;
+    }
+    nav ul{
+        text-align:right;
+        position:relative;
+    }
+
+    nav li:first-child{
+        left:0;
+        margin:0;
+        top:-.8rem;
+    }
+
+    /*Mettre les figures en colonne*/
+     
+    /*display: inline-block;*/
+    /*width:24%*/
+    /*margin:right:5rem;*/
+
+
+
+

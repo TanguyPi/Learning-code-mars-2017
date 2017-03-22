@@ -169,7 +169,6 @@ figcaption{
     font-weight: bold;
 
     /*Définir les niveaux de couche*/
-    z-index: 1;
 
     /*Permet de centrer ici*/
     -webkit-transform: translateX(-50%);
@@ -179,6 +178,7 @@ figcaption{
 figcaption span{
     font-weight: 400;
     display: block;
+
 }
 
 
