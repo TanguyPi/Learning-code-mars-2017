@@ -1,0 +1,133 @@
+
+/*Style reset*/
+
+*{
+    margin:0;
+    padding:0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html{
+    font-size:62.5%;
+}
+
+body{
+    font-size:1.5rem;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    max-width:100%;
+}
+
+/*Style header*/
+
+header{
+    padding:2rem; 
+    text-align: center;
+}
+
+nav{
+    max-width:85rem;
+    margin:auto;
+    border:1rem double blue;
+    position:relative;
+}
+
+li{
+    display:inline-block;
+     }
+
+li:first-child{
+    position:absolute;
+    left:0%;
+}
+
+li:last-child{
+    position:absolute;
+    right:0%;
+}
+
+/*Style le main*/
+
+main{
+    max-width:85rem;
+    margin:auto;
+}
+
+section:not(:last-child){
+    margin-bottom: 4rem;
+}
+
+/*Style portoflio*/
+
+figure{
+    display:inline-block;
+    position:relative;
+    width:49%;
+
+}
+
+figcaption{
+    
+    position:absolute;
+    background: white;
+    opacity:.5;
+    top:0;
+    left:0;
+    padding:1rem;
+    width:100%;
+}
+
+form{
+    text-align: right;
+    width:49%;
+    display:inline-block;
+}
+
+textarea,input:not([type="submit"]){
+    width:100%;
+    padding:1rem;
+    margin-bottom: 1rem;
+    border: .2rem solid black;
+    background: violet; 
+  }
+
+[type="submit"]{
+    background:orange;
+    color:white;
+    border:.2rem solid black;
+    padding:1rem;
+    width:20%;
+    font-weight: bold;
+}
+
+article{
+    float: right;
+}
+
+
+/*Desktop down-responsive d'un ordi à un téléphone*/
+
+@media screen and (max-width:450px){
+    figure, form, article{
+        width:100%;
+    }
+
+    li:first-child, li:last-child, {
+        position:initial
+    }
+
+    li{
+        padding:0;
+    }
+
+
+}
+
+
+
