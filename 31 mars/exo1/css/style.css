@@ -20,8 +20,10 @@ body{
     text-align: center 
 }
 
-main{
-    margin-bottom:2rem;
+main,h1,nav{
+    margin:auto;
+    max-width:85rem;
+    position:relative;
 }
 
 h1,h2,h3{
@@ -32,13 +34,35 @@ h1,h2,h3{
 
 
  /*Style header*/
- header{
-     background-color: slategrey;
+
+header{
+     background-color: rgba(65, 72, 78, 0.15);
      padding:2rem;
      margin-bottom:4rem;
      color:white;
-     position:relative;
      }
+
+nav a {
+    color:white; 
+    text-decoration:none;
+}
+
+nav li{
+    background: rgba(255, 255, 0, 0.46);
+    padding:2rem;   
+
+    /*Mettre une transition pour que la couleur arrive lentement*/
+    -webkit-transition:all .5s;
+    transition:all .5s;
+}
+
+.active{
+    background: black;
+}
+
+active a{
+    color:rgba(65, 72, 78, 0.15);
+}
 
 .fa-bars{
     position:absolute;
@@ -56,8 +80,8 @@ h1,h2,h3{
     -webkit-border-radius: 50%;
     border-radius:50%;
 
-    -webkit-transform: translate(-50%,50%);
-    transform:translate(-50%,50%);
+    -webkit-transform: translate(-50%,100%);
+    transform:translate(-50%,100%);
 
  }
 
@@ -68,7 +92,14 @@ h1 span{
 }
 
 nav ul{
-    display:none;
+    height:0;
+    overflow:hidden;
+    -webkit-transition:all .5s;
+    transition:all .5s;
+}
+
+.toggleBurger{
+    height:17rem;
 }
 
 
@@ -93,15 +124,47 @@ h3{
 
 
 
-
 /*Style footer*/
 footer{
     position:relative;
     bottom:0;
     left:0;
     width:100%;
-    background-color: slategrey;
+    background-color: rgba(65, 72, 78, 0.15);
     color:white;
     padding:1.5rem;
     
 }
+
+
+/*Responsive*/
+    /*Requete media pour les écran > à 850px*/
+    @media screen and (min-width:850px){
+
+        /*Style header*/
+        header{ 
+        text-align:left;
+     }   
+
+        .fa-bars{
+            display:none;
+    }
+
+        nav ul{
+            height:auto;
+            position:absolute;
+            right:0;
+            bottom:0;
+           
+          }
+
+        nav li{
+            display:inline-block;
+        }
+
+
+        nav li:not(:last-child){
+            margin-right:5rem;
+
+        }
+      }

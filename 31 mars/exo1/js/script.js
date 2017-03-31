@@ -9,7 +9,7 @@
 
 
             // Créer un tableau pour la nav
-            var myNav = [  'Acceuil','Portfolio','Contact,'];
+            var myNav = [  'Acceuil','Portfolio','Contact'];
          
          
             // Créer un objet pour les titres des pages
@@ -42,6 +42,12 @@
                 // Générer une balise nav + ul dans le header
                 myHeader.append('<nav><i class="fa fa-bars" aria-hidden="true"></i><ul></ul></nav>');
 
+                // Activer le burgerMenu au click sur la balise .fa.bars
+                $('.fa-bars').click(function(){
+
+                    $('nav ul').toggleClass('toggleBurger');
+                });
+
                 // Faire une boucle sur myNav pour générer les liens de la nav
                 for (var i = 0; i < myNav.length; i++){
                     console.log(myNav[i]);
@@ -57,11 +63,17 @@
 
                 myMain.append('<section' +myContent.Acceuil + '</section');
 
+                // Ajouter la class active sur la première li de la nav
+                $('nav li:first').addClass('active');
+
 
                 
                 // Capter l'événement click sur les balises a en bloquant le comportement naturel des balises a 
                         // Sélection
                         $('a').click(function(evt){
+
+                        // Supprimer la class des balises li de la nav
+                        $('nav li').removeClass('active');
                             
                         //Bloquer le comportement naturel des balises a
                         evt.preventDefault();
@@ -79,22 +91,30 @@
 
 
                                 // Sélectionner la section pour changer le contenu (.html car il y  a des balises donc pas .text)
-                                $('section').html(myContentAcceuil);
+                                $('section').html(myContent.Acceuil);
 
 
                         } else if ($(this).attr('href') == 'Portfolio'){
                                $('h2').text(myTitles.Portfolio);
 
                                  // Sélectionner la section pour changer le contenu (.html car il y  a des balises donc pas .text)
-                                 $('section').html(myContentPortflio);
+                                 $('section').html(myContent.Portfolio);
 
                         
                         } else {
                                $('h2').text(myTitles.Contact);
 
                                 // Sélectionner la section pour changer le contenu (.html car il y  a des balises donc pas .text)
-                               $('section').html(myContentContact);
+                               $('section').html(myContent.Contact);
+
+                                // Ajouter la class active sur la balise li de la balise à Sélectionner
+                                $(this).parent().addClass('active');
                         };
+
+
+                                // Fermer le burger burgerMenu
+                                $('nav li').removeClass('toggleBurger');
+                                  
 
                          
                     
