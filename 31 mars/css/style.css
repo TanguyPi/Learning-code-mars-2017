@@ -1,0 +1,107 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+/*Style reset*/
+
+*{
+    margin:0;
+    padding:0;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size:1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-align: center 
+}
+
+main{
+    margin-bottom:2rem;
+}
+
+h1,h2,h3{
+   font-family: 'Open Sans', sans-serif; 
+   font-weight: 400;
+
+ }
+
+
+ /*Style header*/
+ header{
+     background-color: slategrey;
+     padding:2rem;
+     margin-bottom:4rem;
+     color:white;
+     position:relative;
+     }
+
+.fa-bars{
+    position:absolute;
+    font-size:2rem;
+    padding-top:.6rem;
+    background:grey;
+    border:.3rem solid white;
+    width: 4rem;
+    height:4rem;
+    border-radius: 50%;
+    left:50%;
+    bottom:0;
+    cursor: pointer;
+
+    -webkit-border-radius: 50%;
+    border-radius:50%;
+
+    -webkit-transform: translate(-50%,50%);
+    transform:translate(-50%,50%);
+
+ }
+
+h1 span{
+    display:block;
+    font-size: 1rem;
+    padding:1rem;
+}
+
+nav ul{
+    display:none;
+}
+
+
+
+/*Style main*/
+h2{
+    color:slategrey;   
+}
+
+h2:after{
+    content:'';
+    display:block;
+    width:5rem;
+    height:.2rem;
+    margin:1rem auto 2rem auto;
+    border-bottom: .2rem dotted black;
+}
+
+h3{
+    margin-bottom: 1rem;
+}
+
+
+
+
+/*Style footer*/
+footer{
+    position:relative;
+    bottom:0;
+    left:0;
+    width:100%;
+    background-color: slategrey;
+    color:white;
+    padding:1.5rem;
+    
+}
