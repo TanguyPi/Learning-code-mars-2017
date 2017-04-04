@@ -1,0 +1,25 @@
+
+section{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,.8);
+
+
+    /*Pour le fadeToggle il faut faire un display:none; pour que quand je clique l'index apparait*/
+    display:none;
+}
+
+
+article{
+    background:white;
+    width:30rem;
+    padding: .5rem 1rem;
+    margin:15rem auto 0 auto;
+    cursor:pointer;
+
+    -webkit-border-radius:.5rem;
+    border-radius:.5rem;
+}
