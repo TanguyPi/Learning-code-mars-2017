@@ -1,0 +1,369 @@
+
+/*Style Reset*/
+
+*{
+    margin: 0;
+    padding: 0;
+    /*Intégrer le padding et le border dans la taille des boites*/
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+html{
+    font-size:62.5%;
+}
+
+body{
+    font-size:1.5rem;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    }
+
+img{
+    max-width: 100%;
+
+}
+
+h1{
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    padding-bottom: 1rem;
+ }
+
+ h1 span{
+     font-family:'Raleway', sans-serif;
+     /*Le span fait la moitié du titre h1*/
+     font-size: .5em;
+     /*Pour mettre le span à la ligne et non avec le titre*/
+     display:block;
+ }
+
+/*La balise a enfant direct de header ici-On aurait pu utuliser    h1+a     ou    header: nth-chil(2) */
+ header > a{
+     font-size:1.9rem;
+     background: white;
+     /*Balise de type inline donc on utilise display pour pouvoir lui mettre d'autre propriété*/
+     display:inline-block;
+     width: 4rem;
+     height: 4rem;
+
+     /*Nous avons un carré donc pour faire un rond c'est toujours border-radius: 50%- Ne pas oublier de mettre le webkit*/
+     -webkit-border-radius: 50%;
+     border-radius: 50%;
+     border: .1rem solid black;
+     /*On centre le picto dans le burger-On aurait pu aussi utiliser header>i*/
+     padding-top: .7rem;
+    
+     /*Picto soit au milieu du header*/
+
+     position:absolute;
+     left:50%;
+     top:100%;
+     
+     -webkit-transform:translate(-50% -50%);
+     transform: translate(-50%, -50%);
+   }  
+
+   header >a :hover{
+       color: white;
+       background: brown;
+       border-color: white;
+   }
+
+ a, header li{
+     text-decoration: none;
+
+     -webkit-transition: all .5s;
+     transition: all .5s;
+ }
+
+    /*Suppprimer le style des listes: les ptites puces*/
+    ul{
+        list-style:none;
+    }
+
+ header{
+     background:#FF9158;
+     color:white;
+     padding:2rem 2rem 3rem 2rem;
+     position:relative;
+ }
+
+ nav{
+  
+  display:none;
+
+ }
+
+
+
+.aboutPage nav{
+    position:fixed;
+    background:white;
+    top:0;
+    left:-100%;
+    height:100%;
+    padding:2rem;
+    width:20rem;
+    z-index:10000;
+    display:block;
+
+}
+    /*Changer le design des li*/
+    header li {
+        background: rgba(173, 162, 162, 0.35);
+        padding:1rem;
+        margin-bottom:1rem;
+        font-weight: 700;
+    }
+
+        /*Changer la couleur des li*/
+    nav a{
+        color:white;
+        }
+
+    header li:hover{
+        background:white;   
+}
+    header li:hover a{
+        color:brown;
+    }
+
+  
+
+
+/*Style main*/
+
+main{
+    padding:4rem 2rem 10rem 2rem;
+}
+
+h2{
+    font-family: 'Cinzel', serif;
+    margin-bottom:1rem;
+ 
+}
+
+/*Portofolio*/
+
+figure{
+    position:relative;
+}
+
+    /*Rajouter du blanc sur une photo*/
+figure:after{
+    content:"";
+    width: 100%;
+    height: 3rem;
+    position:absolute;
+    bottom:0;
+    left:0;
+    background:white;
+  
+    }
+
+
+figcaption{
+    position: absolute;
+    background: white;
+    bottom: 0;
+    padding:1rem;
+    width: 70%;
+    left:50%;
+    font-weight: bold;
+
+    /*Définir les niveaux de couche*/
+
+    /*Permet de centrer ici*/
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+figcaption span{
+    font-weight: 400;
+    display: block;
+
+}
+
+
+.portfolioPage article{
+    position:relative;
+    margin:2rem auto;
+  
+  /*Voir le projet disparait de la page*/
+    overflow: hidden;
+}
+
+
+/*Masquer les éléments qui dépassent de la balise*/
+
+
+.portfolioPage main a {
+    color: white;
+    font-weight:bold;
+    background: #FF9158;
+    padding: .5rem 1rem;
+    /*Placer ''le projet'' sur la photo en hauteur*/
+    top:-10%;
+    left:50%;
+
+    /*  Pour que "le projet" apparaisse sur l'image*/
+    z-index:1;
+
+    /*Webkit sert à centrer et transform à centrer de manière responsive*/
+    -webkit-transform:translateX(-50%);
+    transform: translateX(-50%);
+
+    position: absolute;
+    }
+
+    /*Changer la propriété top de la balise A au survol de l'article-L'animation s'arrête presque au milieu de la page*/
+.portfolioPage article:hover a{
+    top:40%;
+}
+
+
+
+
+
+
+
+
+/*Footer*/
+footer{
+    position: fixed;
+    bottom:0;
+    left:0;
+    width: 100%;
+    padding: 2rem;
+    background:#FF9158;
+    color: white;
+    font-weight:700;
+    z-index:1000;
+}
+
+footer a{
+    color:white;
+}
+
+    /*Toutes les balises li du foot sauf la dernière- on aurait pu aussi utiliser last of type*/
+    footer li:not(:last-child){
+        display: inline-block;
+        margin-bottom: 1rem;   
+    }
+
+    footer .fa{
+        font-size: 1.5rem;
+    }
+
+
+
+    /*Style contact*/
+
+form{
+    margin: 2rem auto;
+}
+
+textarea,input:not([type="submit"]){
+    display:block;
+    width:100%;
+    border:none;
+    /*pointiller*/
+    border-bottom:.1rem dotted;
+    padding: 1rem;
+    margin-bottom:2rem;
+}
+
+textarea{
+    min-height: 10rem;
+}
+
+form :last-child{
+    background: #FF9158;
+    color: white;
+    font-size:1.5rem;
+    font-weight: bold;
+    border: none;
+    padding: .5rem 1rem;
+}
+
+iframe{
+    width: 100%;
+    min-height: 20rem;
+    border: none;
+}
+
+
+
+
+/*Requête media*/
+
+        /*Ecran d'une taille minimal de 400px*/
+        @media screen and (min-width:400px){
+            /*Style portfolio*/
+            .portfolioPage article{
+                display: inline-block;
+                width:49%;
+
+            /*Gérer les paddings*/
+            padding: 0 1rem 0 0;
+        }
+
+            /*On selectionne toutes les deux balises à partir de la deuxième*/
+            .portfolioPage article:nth-child(2n+2){
+                padding: 0 0 0 1rem;
+                 }
+
+         }
+
+
+            
+        /*Ecran d'une taille minimal de 750px qui équivaut à une tablette*/
+        @media screen and (min-width:750px){
+
+
+                /*Style reset*/
+                main, h1,nav{
+                    max-width:85rem;
+                    margin:auto;
+                }
+
+                h1{
+                    font-size:4rem;
+                    /*Déplacer une balise ou le premier mot d'un paragraphe*/
+                    text-indent: 1rem;
+                }
+
+                h1 span{
+                    display:initial;
+                }
+            
+
+                /*Style header*/
+                    /*Masquer le burger*/
+
+                    header{
+                        text-align:left;
+                        
+                    }
+
+                    header > a{
+                        display:none;
+                    }
+
+                    nav{
+                        display: block;
+                        text-indent: 1rem;
+                    }
+
+                    nav li{
+                        display: inline-block;
+                    }
+
+                    /*Style main*/
+                    main{
+                        padding:4rem 0 10rem 0;
+                    }
+        }
