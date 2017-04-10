@@ -1,0 +1,135 @@
+*{
+    margin:0;
+    padding:0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html{
+    font-size:62.5%;
+}
+
+body{
+    font-size:1.5rem;
+    text-align:center;
+    
+}
+
+img{
+    max-width:100%;
+  
+}
+
+/* Style header*/
+
+header{
+ 
+    margin-bottom:4rem;
+   
+    
+   
+    
+}
+
+a{
+    text-decoration:none;
+    text-transform:uppercase;
+
+}
+
+nav{
+    position:relative;
+    padding:2rem;
+    max-width:100%;
+    text-decoration:none;
+
+}
+
+nav li {
+    display:inline-block;
+    margin:auto;
+    text-align:right;
+}
+
+li:first-child{
+    position:absolute;
+    left:5%;
+    top:2;
+}
+
+header p, header h1,{
+    text-align:center;
+}
+
+button{
+    background:rgba(255, 235, 59, 0.96);
+    border:none;
+    padding:1rem;
+    color:white;
+    text-transform:uppercase;
+}
+
+h2{
+    margin-bottom:2rem;
+}
+/*Style main*/
+
+
+main{
+    max-width:80%;
+    margin:auto;
+    margin-bottom:4rem;
+
+}
+
+
+figure{
+    position:relative; 
+}
+
+figcaption{
+    position:absolute;
+    background:white;
+    width:100%;
+    padding:1rem;
+    bottom:0;
+}
+
+article p{
+    margin-bottom:4rem;
+}
+
+
+textarea{
+    width:30%;
+    padding:2rem;
+    margin:auto;
+    position:absolute;
+
+}
+
+select,input:not([type="submit"]){
+    padding:1rem;
+    position:relative; 
+    width:30%;
+    
+   
+}
+
+[type="submit"]{
+    text-align:center;
+    background:rgba(255, 235, 59, 0.96);
+    border:none;
+    padding:1rem;
+    margin-top:2rem;
+    color:white;
+    text-transform:uppercase;
+
+     }
+
+
+
+/*Style footer*/
+
+
+/*responsive design*/

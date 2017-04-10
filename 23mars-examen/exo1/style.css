@@ -157,7 +157,7 @@ section:last-child article{
 
 /*Mise en forme du formulaire- copier coller du sélecteur du 22 mars*/
 
-textarea,input:not([type="submit"]){
+textarea{
     display:block;
     padding:.5rem;
     margin-bottom: 1rem;
