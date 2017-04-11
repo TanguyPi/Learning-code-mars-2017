@@ -1,0 +1,82 @@
+
+/*Style reset*/
+
+*{
+    margin:0;
+    padding:0;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+html{
+    font-size:62.5%;
+}
+
+body{
+    font-size:1.5rem;
+    text-align:center;
+}
+
+img{
+    max-width:100%;
+}
+
+/*Formulaire et image sur deux colonnes*/
+
+main{
+    padding:2rem;
+}
+
+#myForm article{
+    width:49%;
+    display:inline-block;
+    margin:2rem auto;
+    vertical-align:top;
+    text-align:left;
+}
+
+
+/*Modal*/
+#modal{
+    position:fixed;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,0.7);
+    height:100%;
+    width:100%;
+
+/*Pour l'animation*/
+display:none;
+
+}
+
+
+
+#modal article{
+    width:30rem;
+    background-color:white;
+    padding:2rem;
+    margin:5rem auto;
+}
+
+/*Pour les écran minimale de 550px, mettre les sections sur 2 colonnes*/
+    @media screen and (min-width:550px){
+
+        main section{
+            display:inline-block;
+            width:49%;
+            vertical-align:top;
+
+        }
+
+    }
+
+/*Pour les écran minimale de 850px, mettre les sections sur 3 colonnes*/
+    @media screen and (min-width:850px){
+
+        main section{
+            width:32%;
+      
+          
+        }
+
